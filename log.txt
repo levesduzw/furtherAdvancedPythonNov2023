@@ -1,0 +1,228 @@
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 0}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 1}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 2}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 3}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 4}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 5}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 6}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 7}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 8}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 9}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 10}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 11}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 12}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 13}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 14}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 15}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 16}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 17}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 18}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 19}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 20}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 21}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 22}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 23}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 24}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 25}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 26}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 27}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 28}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 29}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 30}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 31}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 32}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 33}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 34}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 35}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 36}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 37}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 38}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 39}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 40}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 41}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 42}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 43}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 44}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 45}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 46}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 47}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 48}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 49}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 50}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 51}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 52}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 53}
+
+Running a function called isOdd
+The positional arguments are ()
+The keyword arguments are {'n': 54}
+
+Running a function called squares
+The positional arguments are (-10,)
+The keyword arguments are {'n': 11}
+
+Running a function called isOdd
+The positional arguments are (9,)
+The keyword arguments are {}
+
