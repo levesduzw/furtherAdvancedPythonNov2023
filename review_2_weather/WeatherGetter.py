@@ -9,9 +9,10 @@ class WeatherGetter(Thread):
     
     semaphore = None    # optional
     
-    def __init__(self, city, output_file_rlock, threads=1):
+    def __init__(self, city, output_filename, output_file_rlock, threads=1):
         Thread.__init__(self)
         self.city = city
+        self.output_filename = output_filename
         self.output_file_rlock = output_file_rlock
         self.semaphore = Semaphore(threads)
         
@@ -45,7 +46,7 @@ class WeatherGetter(Thread):
         city_name = city_data[2]
         print(f'{city_dt} Writing {city_name} data to file...')
         with self.output_file_rlock:
-            with open('weather_data.csv', 'a') as csvfile:
+            with open(self.output_filename, 'a') as csvfile:
                 csv_writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
                 csv_writer.writerow(city_data)
     
