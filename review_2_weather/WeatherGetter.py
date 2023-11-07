@@ -14,10 +14,6 @@ class WeatherGetter(Thread):
         self.city = city
         self.output_file_rlock = output_file_rlock
         self.semaphore = Semaphore(threads)
-
-    
-    def __call__(self):
-        print(f'(Timestamp) Call weather for city "{self.city}"')
         
     def query_website(self, query_url) -> list:
         """Queries website
@@ -41,6 +37,7 @@ class WeatherGetter(Thread):
                 data['wind']['speed'],
                 data['wind']['deg'],
                 ]        
+
     def serialize(self, city_data):
         # timestamp	city	temp	wind_speed	wind_dir
         #city_dt = city_data[0].strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -58,7 +55,7 @@ class WeatherGetter(Thread):
         query_url = self.URL_TEMPLATE.format(city_name=self.city, api_key=self.API_KEY)
         
         city_data = self.query_website(query_url)
-        _ = self.serialize(city_data)
+        self.serialize(city_data)
         
         print(f'(Timestamp) Got temperature {self.temperature} for city "{self.city}"')
         
