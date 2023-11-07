@@ -23,7 +23,7 @@ class WeatherGetter(Thread):
         """Queries website
 
         Returns:
-            tuple of objects: (timestamp, city, temp, wind_speed, wind_dir)
+            list of objects: (timestamp, city, temp, wind_speed, wind_dir)
         """        
         self.semaphore.acquire()
         response = requests.get(query_url)
@@ -33,18 +33,19 @@ class WeatherGetter(Thread):
         
         dt = datetime.fromtimestamp(data['dt'])
         
-        return (dt,
+        
+        return [datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                dt,
                 self.city,
                 data['main']['temp'],
                 data['wind']['speed'],
                 data['wind']['deg'],
-                )
-        
+                ]        
     def serialize(self, city_data):
         # timestamp	city	temp	wind_speed	wind_dir
         #city_dt = city_data[0].strftime('%Y-%m-%dT%H:%M:%SZ')
-        city_dt = city_data[0].strftime('%Y-%m-%d %H:%M:%S')
-        city_name = city_data[1]
+        city_dt = city_data[1].strftime('%Y-%m-%d %H:%M:%S')
+        city_name = city_data[2]
         print(f'{city_dt} Writing {city_name} data to file...')
         with self.output_file_rlock:
             with open('weather_data.csv', 'a') as csvfile:
