@@ -1,4 +1,4 @@
-from threading import Thread, Semaphore
+from threading import Thread
 from datetime import datetime
 import requests
 import csv
@@ -9,12 +9,12 @@ class WeatherGetter(Thread):
     
     semaphore = None    # optional
     
-    def __init__(self, city, output_filename, output_file_rlock, threads=1):
+    def __init__(self, city, semaphore, output_filename, output_file_rlock):
         Thread.__init__(self)
         self.city = city
         self.output_filename = output_filename
         self.output_file_rlock = output_file_rlock
-        self.semaphore = Semaphore(threads)
+        self.semaphore = semaphore
         
     def query_website(self, query_url) -> list:
         """Queries website
