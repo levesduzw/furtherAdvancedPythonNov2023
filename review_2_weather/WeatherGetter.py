@@ -49,7 +49,7 @@ class WeatherGetter(Thread):
         print(f'{city_dt} Writing {city_name} data to file...')
         with self.output_file_rlock:
             with open('weather_data.csv', 'a') as csvfile:
-                csv_writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
+                csv_writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
                 csv_writer.writerow(city_data)
     
         
