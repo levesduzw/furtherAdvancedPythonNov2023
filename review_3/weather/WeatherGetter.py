@@ -2,8 +2,9 @@ from threading import Thread
 from datetime import datetime
 import requests
 import csv
+import multiprocessing
 
-class WeatherGetter(Thread):
+class WeatherGetter(multiprocessing.Process):
     URL_TEMPLATE = 'http://api.openweathermap.org/data/2.5/weather?q={city_name}&units=metric&APPID={api_key}'
     API_KEY = '957d663a2296945e39a56609740a2548'
     
@@ -11,6 +12,9 @@ class WeatherGetter(Thread):
     
     def __init__(self, city, semaphore, output_filename, output_file_rlock):
         Thread.__init__(self)
+        # multiprocessing.Process.__init__(self)
+        # multiprocessing.Process.__init__()
+        super().__init__()
         self.city = city
         self.output_filename = output_filename
         self.output_file_rlock = output_file_rlock
@@ -44,7 +48,7 @@ class WeatherGetter(Thread):
         #city_dt = city_data[0].strftime('%Y-%m-%dT%H:%M:%SZ')
         city_dt = city_data[1].strftime('%Y-%m-%d %H:%M:%S')
         city_name = city_data[2]
-        print(f'{city_dt} Writing {city_name} data to file...')
+        #print(f'{city_dt} Writing {city_name} data to file...')
         with self.output_file_rlock:
             with open(self.output_filename, 'a') as csvfile:
                 csv_writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
@@ -52,13 +56,13 @@ class WeatherGetter(Thread):
     
         
     def run(self):
-        print(f'(Timestamp) Starting thread for city "{self.city}"')
+        #print(f'(Timestamp) Starting thread for city "{self.city}"')
         query_url = self.URL_TEMPLATE.format(city_name=self.city, api_key=self.API_KEY)
         
         city_data = self.query_website(query_url)
         self.serialize(city_data)
         
-        print(f'(Timestamp) Got temperature {self.temperature} for city "{self.city}"')
+        #print(f'(Timestamp) Got temperature {self.temperature} for city "{self.city}"')
         
         return None
     
