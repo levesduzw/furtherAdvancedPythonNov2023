@@ -3,6 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 
 from flask import render_template
+from swapi_wrapper import get_person_info
 
 @app.route('/')
 def root():
@@ -43,6 +44,10 @@ def manu():
 @app.route('/lunch/<dessert>')
 def lunch(dessert=None):
     return render_template('lunch.html', dessert=dessert)
+
+@app.route('/person/1')
+def person():
+    return get_person_info()
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True)
